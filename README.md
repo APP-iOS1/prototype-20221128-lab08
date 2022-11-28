@@ -40,3 +40,8 @@
 ## 활용한 기술
 
 ## 스크린샷
+
+## 참여자
+|<img width="120" src="https://avatars.githubusercontent.com/u/57763334?v=4">|<img width="120" src="https://avatars.githubusercontent.com/u/114036537?v=4">|<img width="120" src="https://avatars.githubusercontent.com/u/107797217?v=4">|<img width="120" src="https://avatars.githubusercontent.com/u/55937627?v=4">|<img width="120" src="https://avatars.githubusercontent.com/u/80445363?v=4">|
+|:---:|:---:|:---:|:---:|:---:|
+|김도희<br>[@ehvkddl](https://github.com/ehvkddl)|김미주<br>[@mumjee03](https://github.com/mumjee03)|이민경<br>[@mxnkng](https://github.com/mxnkng)|이진아<br>[@l1004ga](https://github.com/l1004ga)|장다영<br>[@Da01002](https://github.com/Da01002)|
