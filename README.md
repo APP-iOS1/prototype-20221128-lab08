@@ -40,7 +40,7 @@
 ## 활용한 기술
 
 ## 스크린샷
-|<img width="320" alt="스크린샷 2022-11-28 오후 3 56 28" src="https://user-images.githubusercontent.com/55937627/204231396-c527db7f-72ea-4ac4-9e7c-04ca3de3c693.png">|<img width="319" alt="스크린샷 2022-11-28 오후 5 33 10" src="https://user-images.githubusercontent.com/55937627/204231487-e656aa9d-5acc-4a07-8e02-7452739936f8.png">|<img width="319" alt="스크린샷 2022-11-28 오후 3 59 16" src="https://user-images.githubusercontent.com/55937627/204231453-ab7bd0fc-84d0-49af-a43b-5efcd75e3804.png">
+|<img width="200" alt="스크린샷 2022-11-28 오후 3 56 28" src="https://user-images.githubusercontent.com/55937627/204231396-c527db7f-72ea-4ac4-9e7c-04ca3de3c693.png">|<img width="200" alt="스크린샷 2022-11-28 오후 5 33 10" src="https://user-images.githubusercontent.com/55937627/204231487-e656aa9d-5acc-4a07-8e02-7452739936f8.png">|<img width="200" alt="스크린샷 2022-11-28 오후 3 59 16" src="https://user-images.githubusercontent.com/55937627/204231453-ab7bd0fc-84d0-49af-a43b-5efcd75e3804.png">
 
 
 
