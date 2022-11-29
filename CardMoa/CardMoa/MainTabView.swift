@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            MyCardView().tabItem {
+                Image(systemName: "creditcard")
+            }.tag(1)
+            CardRecommendView().tabItem {
+                Image(systemName: "list.dash.header.rectangle")
+            }.tag(2)
+            BenefitSearchView().tabItem {
+                Image(systemName: "magnifyingglass")
+            }.tag(3)
+            MapView().tabItem {
+                Image(systemName: "map")
+            }.tag(4)
+            ProfileView().tabItem {
+                Image(systemName: "person.crop.rectangle")
+            }.tag(5)
         }
-        .padding()
+        .onAppear() {
+            UITabBar.appearance().barTintColor = UIColor(.red)
+        }
     }
 }
 
