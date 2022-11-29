@@ -10,26 +10,34 @@ import SwiftUI
 struct MainTabView: View {
     
     var body: some View {
-        TabView {
-            MyCardView().tabItem {
-                Image(systemName: "creditcard")
-            }.tag(1)
-            CardRecommendView().tabItem {
-                Image(systemName: "list.dash.header.rectangle")
-            }.tag(2)
-            BenefitSearchView().tabItem {
-                Image(systemName: "magnifyingglass")
-            }.tag(3)
-            MapView().tabItem {
-                Image(systemName: "map")
-            }.tag(4)
-            ProfileView().tabItem {
-                Image(systemName: "person.crop.rectangle")
-            }.tag(5)
-        }
-        .onAppear() {
-            UITabBar.appearance().barTintColor = UIColor(.red)
-        }
+        
+        //NavigationStack{
+            TabView {
+                MyCardView().tabItem {
+                    Image(systemName: "creditcard")
+                }.tag(1)
+                CardRecommendView().tabItem {
+                    Image(systemName: "list.dash.header.rectangle")
+                }.tag(2)
+                BenefitSearchView().tabItem {
+                    Image(systemName: "magnifyingglass")
+                }.tag(3)
+                MapView().tabItem {
+                    Image(systemName: "map")
+                }.tag(4)
+                ProfileView().tabItem {
+                    Image(systemName: "person.crop.rectangle")
+                }.tag(5)
+            }
+            
+//            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+//            .toolbarBackground(
+//                Color.mainColor,
+//                for: .navigationBar, .tabBar
+//            )
+//            .toolbarBackground(.visible, for: .navigationBar, .tabBar)
+        //} // NavigationStack
+        
     }
 }
 
