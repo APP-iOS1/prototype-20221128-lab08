@@ -30,6 +30,7 @@ struct MapView: View {
     )
     
     var body: some View {
+        NavigationStack{
             VStack {
                 Map(coordinateRegion: $region, annotationItems: pointsOfInterest){
                     item in
@@ -55,6 +56,14 @@ struct MapView: View {
                 }
                 
             }.ignoresSafeArea(edges: .top)
+                
+                .toolbarColorScheme(.dark, for: .tabBar)
+                .toolbarBackground(
+                    Color.mainColor,
+                    for: .tabBar
+                )
+                .toolbarBackground(.visible, for: .tabBar)
+        }
         }
 }
 
