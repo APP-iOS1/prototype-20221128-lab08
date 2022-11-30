@@ -20,6 +20,10 @@ struct CardFlipView: View {
         ZStack {
             CardBackView(degree: $backDegree)
             CardFrontView(cardName: card.imgName, degree: $frontDegree)
+            if backDegree == 0 {
+                CardDetailButtonView(degree: $backDegree)
+                    .offset(y: 180)
+            }
         }
         .onTapGesture {
             flipCard ()
