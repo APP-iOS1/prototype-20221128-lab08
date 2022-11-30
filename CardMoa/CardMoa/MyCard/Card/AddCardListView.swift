@@ -10,6 +10,7 @@ import SwiftUI
 struct AddCardListView: View {
     @State var listX: CGFloat = 0
     var card: Card
+    @State private var showingAlert: Bool = false
     
     var body: some View {
         ZStack {
@@ -71,25 +72,39 @@ struct AddCardListView: View {
                         .foregroundColor(.gray)
                     }
                 }
-
+                
             } // ZStack2
             .offset(x: listX)
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        if listX <= 10 && listX >= -100 {
+                        if listX <= 0 && listX >= -100 { //-100보다 크고 0보다 작을 때
                             listX += value.translation.width / 30
+                            if listX <= -100 { // -100보다 작거나 같을 때
+                                showingAlert = true
+                               
+                            }
                         }
+                        
                     }
                     .onEnded { value in
                         listX = 0
                     }
             )
-            
-            
-        } // ZStack1
-    }
+            .alert("카드를 추가하시겠습니까?", isPresented: $showingAlert) {
+                Button("Cancel", role: .cancel) {
+                    listX = 0
+                }
+                Button("OK") {
+                    listX = 0
+                }
+                
+            }
+        }
+        
+    } // ZStack1
 }
+
 
 struct AddCardListView_Previews: PreviewProvider {
     static var previews: some View {

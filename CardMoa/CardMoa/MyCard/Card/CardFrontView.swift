@@ -12,12 +12,26 @@ struct CardFrontView: View {
     @Binding var degree : Double
     
     var body: some View {
-        VStack {
-            Image("\(cardName)_L")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 260)
-                .padding(.horizontal, 5)
+        ZStack {
+           
+                Image("\(cardName)_L")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 260)
+                    .padding(.horizontal, 5)
+                HStack {
+                    Spacer()
+                    Image(systemName: "magnifyingglass.circle.fill")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .offset(x: -10, y:170)
+                        .shadow(radius: 2)
+                    
+                        
+                }
+            
+            .frame(width: 240, height: 400)
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
@@ -25,6 +39,6 @@ struct CardFrontView: View {
 
 struct CardFrontView_Previews: PreviewProvider {
     static var previews: some View {
-        CardFrontView(cardName: "Samsung_iDON.png", degree: .constant(0))
+        CardFrontView(cardName: "Samsung_iDPET", degree: .constant(0))
     }
 }
