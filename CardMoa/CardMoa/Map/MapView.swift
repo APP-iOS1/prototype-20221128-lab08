@@ -24,6 +24,10 @@ var pointsOfInterest = [
 
 struct MapView: View {
     
+    @State private var search : String = ""
+    @State private var view : Int = 0
+    @State var searchString : String = ""
+    
     @State private var region: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.571379, longitude: 126.978678),
         span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
@@ -31,40 +35,51 @@ struct MapView: View {
     
     var body: some View {
         NavigationStack{
-            VStack {
-                Map(coordinateRegion: $region, annotationItems: pointsOfInterest){
-                    item in
-                    //                기본 MapMarker로 표시하기
-                    //                MapMarker(coordinate: item.coordinate, tint: .red)
-                    //
-                    //                MapAnnotation 사용해서 커스텀 마커로 표시하기
-                    MapAnnotation(coordinate: item.coordinate) {
-                        VStack {
-                            Image(systemName: "cup.and.saucer.fill")
-                                .resizable()
-                                .foregroundColor(.brown)
-                                .frame(width: 30, height: 30)
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                            VStack{
-                                Text(item.name).font(.system(size: 15)).fontWeight(.bold)
-                                Text(item.benefit).font(.system(size: 13)).fontWeight(.bold).foregroundColor(.red)
-                            }.padding(5).background(Color.white.opacity(0.7)).cornerRadius(10)
+            ZStack{
+                VStack {
+                    Map(coordinateRegion: $region, annotationItems: pointsOfInterest){
+                        item in
+                        //                기본 MapMarker로 표시하기
+                        //                MapMarker(coordinate: item.coordinate, tint: .red)
+                        //
+                        //                MapAnnotation 사용해서 커스텀 마커로 표시하기
+                        MapAnnotation(coordinate: item.coordinate) {
+                            VStack {
+                                Image(systemName: "cup.and.saucer.fill")
+                                    .resizable()
+                                    .foregroundColor(.brown)
+                                    .frame(width: 30, height: 30)
+                                    .background(.white)
+                                    .clipShape(Circle())
+                                
+                                VStack{
+                                    Text(item.name).font(.system(size: 15)).fontWeight(.bold)
+                                    Text(item.benefit).font(.system(size: 13)).fontWeight(.bold).foregroundColor(.red)
+                                }.padding(5).background(Color.white.opacity(0.7)).cornerRadius(10)
+                            }
                         }
                     }
+                }.ignoresSafeArea(edges: .top)
+                VStack{
+                    HStack{
+                        TextField("검색어를 입력해주세요", text: $search)
+                        Button {
+                            searchString = search
+                        } label: {
+                            Image(systemName: "magnifyingglass").foregroundColor(.black)
+                        }
+                    }.padding().background(.white).cornerRadius(10).padding()
+                    Spacer()
                 }
-                
-            }.ignoresSafeArea(edges: .top)
-                
-                .toolbarColorScheme(.dark, for: .tabBar)
-                .toolbarBackground(
-                    Color.mainColor,
-                    for: .tabBar
-                )
-                .toolbarBackground(.visible, for: .tabBar)
+            }
+            .toolbarColorScheme(.dark, for: .tabBar)
+            .toolbarBackground(
+                Color.mainColor,
+                for: .tabBar
+            )
+            .toolbarBackground(.visible, for: .tabBar)
         }
-        }
+    }
 }
 
 struct MapView_Previews: PreviewProvider {
@@ -72,38 +87,3 @@ struct MapView_Previews: PreviewProvider {
         MapView()
     }
 }
-
-/*
- struct AnnotatedItem: Identifiable {
- let id = UUID()
- var name: String
- var coordinate: CLLocationCoordinate2D
- }
- 
- var pointsOfInterest = [
- AnnotatedItem(name: "Times Square", coordinate: .init(latitude: 40.75773, longitude: -73.985708)),
- AnnotatedItem(name: "Flatiron Building", coordinate: .init(latitude: 40.741112, longitude: -73.989723)),
- AnnotatedItem(name: "Empire State Building", coordinate: .init(latitude: 40.748817, longitude: -73.985428))
- ]
- 
- struct MapTabView: View {
- @State private var region: MKCoordinateRegion = MKCoordinateRegion(
- center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -73.985708),
- span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
- )
- 
- var body: some View {
- NavigationStack {
- VStack {
- Map(coordinateRegion: $region,
- annotationItems: pointsOfInterest) { item in
- MapMarker(coordinate: item.coordinate, tint: .purple)
- }
- }
- .navigationTitle("Map")
- }
- }
- }
- 
- 
- */
