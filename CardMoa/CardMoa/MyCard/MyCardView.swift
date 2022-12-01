@@ -59,7 +59,7 @@ struct MyCardView: View {
 
                         
 
-                        AutoAlarmView()
+                    AutoAlarmView()
 
                     } label: {
                         Image("bell")
