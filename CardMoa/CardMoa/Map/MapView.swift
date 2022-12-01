@@ -72,12 +72,17 @@ struct MapView: View {
                     Spacer()
                 }
             }
-            .toolbarColorScheme(.dark, for: .tabBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(
                 Color.mainColor,
+                for: .navigationBar
+                //for: .navigationBar, .tabBar
+            )
+            .toolbarBackground(
+                Color.white,
                 for: .tabBar
             )
-            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(.visible, for: .navigationBar, .tabBar)
         }
     }
 }

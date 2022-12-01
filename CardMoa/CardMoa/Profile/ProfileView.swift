@@ -11,12 +11,13 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                VStack{
-                    Text("찹쌀님") + Text(" 소비의 모든 것").foregroundColor(.myColor)
-                }.font(.title2).fontWeight(.bold)
-                    .padding(.leading, -170)
-                    .padding(.bottom)
+                
                 ScrollView{
+                    VStack{
+                        Text("찹쌀님의") + Text(" 소비 태그").foregroundColor(.black)
+                    }.font(.title2).fontWeight(.bold)
+                        .padding(.leading, -150)
+                    
                     Rectangle()
                         .foregroundColor(.lightPink)
                         .cornerRadius(10)
@@ -37,18 +38,19 @@ struct ProfileView: View {
                                 Image("kakao")
                                 Text("춘식이는 내 친구").fontWeight(.semibold)
                             }.padding(.leading, -130)
-                        ).padding(.bottom)
+                        ).padding(.bottom, 50)
                     
+                    VStack{
+                        Text("카드별 자동 이체").foregroundColor(.black)
+                    }.font(.title2).fontWeight(.bold)
+                        .padding(.leading, -150)
                     
                     Rectangle()
                         .foregroundColor(.lightGray)
                         .cornerRadius(10)
-                        .frame(width: 320, height: 300)
+                        .frame(width: 320, height: 280)
                         .overlay(
                             VStack(alignment: .leading){
-                                HStack{
-                                    Text("카드별 자동이체").font(.title3).fontWeight(.bold)
-                                }
                                 HStack(alignment: .top){
                                     Text("3").fontWeight(.bold) + Text("일").font(.system(size: 12)).fontWeight(.bold)
                                     
@@ -118,11 +120,16 @@ struct ProfileView: View {
                 }
             }.padding(.top, 30)
             
-            .navigationTitle("마이페이지")
-            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+            .navigationTitle("소비의 모든 것")
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(
                 Color.mainColor,
-                for: .navigationBar, .tabBar
+                for: .navigationBar
+                //for: .navigationBar, .tabBar
+            )
+            .toolbarBackground(
+                Color.white,
+                for: .tabBar
             )
             .toolbarBackground(.visible, for: .navigationBar, .tabBar)
         }
