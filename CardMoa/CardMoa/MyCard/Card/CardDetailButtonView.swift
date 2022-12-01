@@ -36,6 +36,8 @@ struct CardDetailButtonView: View {
                 .background(Color.mainColor)
                 .cornerRadius(5)
         }
+        .frame(width: 260, height: 410, alignment: .bottom)
+        .padding(.bottom, 20)
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
         
 
