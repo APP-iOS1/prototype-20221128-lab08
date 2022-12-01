@@ -30,7 +30,7 @@ struct CardBackView: View {
                             .fontWeight(.medium)
                         Text("2022. 11.01 ~ 2022.11.30")
                             .foregroundColor(.gray)
-                            .font(.system(size: 11))
+                            .font(.system(size: 10))
                     }
                     HStack {
                         Text("총 사용금액")
@@ -87,12 +87,14 @@ struct CardBackView: View {
                             .font(.system(size: 10))
                     }
                 }
+                
                 HStack {
                     Text("1구간 혜택")
                         .foregroundColor(.mainColor)
                         .fontWeight(.bold)
                     Spacer()
                 }
+                .padding(.bottom, 5)
                 
                 VStack(spacing: 10) {
                     HStack {
@@ -116,7 +118,13 @@ struct CardBackView: View {
                         Text("10% 청구할인")
                             .foregroundColor(.darkGray)
                     }
-                    .padding(5)
+                    HStack {
+                        Text("통신&공과금")
+                            .fontWeight(.medium)
+                        Spacer()
+                        Text("7% 청구할인")
+                            .foregroundColor(.darkGray)
+                    }
                 }
 //                NavigationLink(destination: CardDetailView(), tag: 1, selection: self.$tag) {
 //                    Button(action: {
@@ -131,9 +139,10 @@ struct CardBackView: View {
 //                    }
 //
 //                }
-                
+                Spacer()
             }
-            .frame(width: 240, height: 400)
+            .padding(15)
+            .frame(width: 260, height: 410)
             
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
         

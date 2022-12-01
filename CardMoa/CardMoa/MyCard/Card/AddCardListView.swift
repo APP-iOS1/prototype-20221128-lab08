@@ -11,6 +11,7 @@ struct AddCardListView: View {
     @State var listX: CGFloat = 0
     var card: Card
     @State private var showingAlert: Bool = false
+    @State private var arrow: String = "<<"
     
     var body: some View {
         ZStack {
@@ -27,24 +28,41 @@ struct AddCardListView: View {
                                 .bold()
                                 .multilineTextAlignment(.center)
                         }
-                        .padding(10)
+                        .padding(.trailing, 30)
+                        
+                        Text(arrow)
+                            .padding(3)
+                            .foregroundColor(.gray)
+                            .bold()
+                            
                     }
                 )
+            
+            
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 30, height: 170)
+                    .frame(width: UIScreen.main.bounds.width - 60, height: 170)
                     .shadow(radius: 5, x: 4, y: 3)
-                
+                    .offset(x: -15)
+                    
+
                 VStack {
-                    Text("1. \(card.name)")
+                    HStack {
+                        Text("\(card.name)")
+                        Spacer()
+                    }
+                    .padding(.leading, 10)
+                    .font(.title2)
+                    .bold()
+
                     HStack {
                         Image("\(card.imgName)_B")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 100)
-                        
+
                         VStack(alignment: .leading) {
                             HStack {
                                 Image(systemName: "ticket")
@@ -72,7 +90,9 @@ struct AddCardListView: View {
                         .foregroundColor(.gray)
                     }
                 }
-                
+                .frame(width: UIScreen.main.bounds.width - 60, height: 170)
+                .offset(x: -15)
+
             } // ZStack2
             .offset(x: listX)
             .gesture(
@@ -85,18 +105,22 @@ struct AddCardListView: View {
                                
                             }
                         }
+                        arrow = ""
                         
                     }
                     .onEnded { value in
                         listX = 0
+                        arrow = "<<"
                     }
             )
             .alert("카드를 추가하시겠습니까?", isPresented: $showingAlert) {
                 Button("Cancel", role: .cancel) {
                     listX = 0
+                    arrow = "<<"
                 }
                 Button("OK") {
                     listX = 0
+                    arrow = "<<"
                 }
                 
             }

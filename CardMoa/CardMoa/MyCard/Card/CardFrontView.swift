@@ -13,25 +13,43 @@ struct CardFrontView: View {
     
     var body: some View {
         ZStack {
-           
-                Image("\(cardName)_L")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 260)
-                    .padding(.horizontal, 5)
-                HStack {
-                    Spacer()
-                    Image(systemName: "magnifyingglass.circle.fill")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .offset(x: -10, y:170)
-                        .shadow(radius: 2)
-                    
-                        
-                }
+            RoundedRectangle(cornerRadius: 15)
+                .stroke()
+                .foregroundColor(.gray)
+                .frame(width: 260, height: 401)
             
-            .frame(width: 240, height: 400)
+            Image("\(cardName)_L")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 260, height: 400)
+                .clipped()
+                .cornerRadius(15)
+                .padding(.horizontal, 5)
+            
+            VStack {
+                LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white.opacity(0.5), Color.white.opacity(0.7), Color.white]),
+                               startPoint: .top, endPoint: .bottom)
+                .frame(height: 250)
+                .cornerRadius(15)
+            }
+            .frame(width: 260, height: 400, alignment: .bottom)
+            
+            HStack {
+                Text("\(cardName)")
+                    .font(.title3)
+                    .bold()
+                    .shadow(radius: 3)
+                Spacer()
+                
+                Image(systemName: "magnifyingglass.circle.fill")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .shadow(radius: 2)
+            }
+            .padding(10)
+            .frame(width: 260, height: 400, alignment: .bottom)
+                     
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
