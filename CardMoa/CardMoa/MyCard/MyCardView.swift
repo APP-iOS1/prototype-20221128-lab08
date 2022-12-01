@@ -53,6 +53,14 @@ struct MyCardView: View {
                     
                     Spacer()
                     
+                    NavigationLink {
+                        
+                    } label: {
+                        Image("bell")
+                            .resizable()
+                            .frame(width: 30, height: 35)
+                    }
+                    
                 }
                 .font(.title2)
                 .fontWeight(.heavy)
@@ -77,12 +85,18 @@ struct MyCardView: View {
                 .offset(y: 260)
                 
                 .navigationTitle("찹쌀님이 소유한 카드")
-                .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+                .toolbarColorScheme(.dark, for: .navigationBar)
                 .toolbarBackground(
                     Color.mainColor,
-                    for: .navigationBar, .tabBar
+                    for: .navigationBar
+                    //for: .navigationBar, .tabBar
+                )
+                .toolbarBackground(
+                    Color.white,
+                    for: .tabBar
                 )
                 .toolbarBackground(.visible, for: .navigationBar, .tabBar)
+                
             } // ZStack
         } // NavigationStack
     }// body

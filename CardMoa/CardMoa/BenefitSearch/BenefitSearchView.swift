@@ -43,13 +43,19 @@ struct BenefitSearchView: View {
                         .frame(maxHeight: .infinity)
                 }
             }
-            .navigationTitle("혜택 검색")
-            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+            .navigationTitle("내가 가진 혜택 검색")
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(
                 Color.mainColor,
-                for: .navigationBar, .tabBar
+                for: .navigationBar
+                //for: .navigationBar, .tabBar
+            )
+            .toolbarBackground(
+                Color.white,
+                for: .tabBar
             )
             .toolbarBackground(.visible, for: .navigationBar, .tabBar)
+            
         }
         
     }

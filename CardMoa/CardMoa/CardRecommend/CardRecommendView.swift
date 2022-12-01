@@ -114,10 +114,15 @@ struct CardRecommendView: View {
             } // ZStack
             
             .navigationTitle("신용카드 & 체크카드")
-            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(
                 Color.mainColor,
-                for: .navigationBar, .tabBar
+                for: .navigationBar
+                //for: .navigationBar, .tabBar
+            )
+            .toolbarBackground(
+                Color.white,
+                for: .tabBar
             )
             .toolbarBackground(.visible, for: .navigationBar, .tabBar)
             

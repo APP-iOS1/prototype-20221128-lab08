@@ -94,10 +94,15 @@ struct AddMyCardView: View {
 
             
             .navigationTitle("카드 추가")
-            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(
                 Color.mainColor,
-                for: .navigationBar, .tabBar
+                for: .navigationBar
+                //for: .navigationBar, .tabBar
+            )
+            .toolbarBackground(
+                Color.white,
+                for: .tabBar
             )
             .toolbarBackground(.visible, for: .navigationBar, .tabBar)
         }
