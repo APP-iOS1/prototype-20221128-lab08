@@ -16,8 +16,12 @@ struct CardFrontView: View {
             RoundedRectangle(cornerRadius: 15)
                 .stroke()
                 .foregroundColor(.gray)
-                .frame(width: 260, height: 401)
-            
+
+
+
+            .frame(width: 240, height: 400)
+
+
             Image("\(cardName)_L")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -40,16 +44,19 @@ struct CardFrontView: View {
                     .bold()
                     .shadow(radius: 3)
                 Spacer()
-                
-                Image(systemName: "magnifyingglass.circle.fill")
-                    .foregroundColor(.white)
+
+                Image(systemName: "hand.tap")
+                    .foregroundColor(.gray)
                     .fontWeight(.bold)
                     .font(.title)
                     .shadow(radius: 2)
+                
+
             }
             .padding(10)
             .frame(width: 260, height: 400, alignment: .bottom)
                      
+
         }
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }

@@ -13,9 +13,9 @@ struct CardResultView: View {
         VStack{
             VStack(alignment: .leading){
                 Text("\(search)").foregroundColor(.myColor)
-                Text("결제 혜택이 있는 카드")
+                Text("결제 혜택이 있는 나의 카드")
             }.font(.title2).fontWeight(.bold)
-                .padding(.leading, -160)
+                .padding(.leading, -120)
                 .padding(.bottom, 20)
             
             //카드 1

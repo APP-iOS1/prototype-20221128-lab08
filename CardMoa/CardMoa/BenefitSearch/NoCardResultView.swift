@@ -15,7 +15,7 @@ struct NoCardResultView: View {
         VStack{
             Image("Cards").resizable().frame(width: 200, height: 200)
             Text("\(search)").foregroundColor(.myColor) + Text(" 결제에")
-            Text("혜택이 있는 카드가 없어요")
+            Text("혜택이 있는 나의 카드가 없어요")
         }.fontWeight(.bold).font(.system(size: 20))
     }
 }
