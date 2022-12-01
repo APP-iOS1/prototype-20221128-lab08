@@ -31,6 +31,7 @@ struct MyCardView: View {
                     .padding(.vertical, 20)
                     
                 } // ScrollView
+            
                 
                 HStack {
                     Button {
@@ -54,12 +55,23 @@ struct MyCardView: View {
                     Spacer()
                     
                     NavigationLink {
+
                         
+
+                        AutoAlarmView()
+
                     } label: {
                         Image("bell")
                             .resizable()
                             .frame(width: 30, height: 35)
+
                     }
+
+                            .padding(.top)
+                    
+                    
+                    
+
                     
                 }
                 .font(.title2)
@@ -85,6 +97,8 @@ struct MyCardView: View {
                 .offset(y: 260)
                 
                 .navigationTitle("찹쌀님이 소유한 카드")
+                
+                
                 .toolbarColorScheme(.dark, for: .navigationBar)
                 .toolbarBackground(
                     Color.mainColor,
@@ -97,6 +111,25 @@ struct MyCardView: View {
                 )
                 .toolbarBackground(.visible, for: .navigationBar, .tabBar)
                 
+
+//                .toolbar {
+//                    NavigationLink {
+//
+//                    } label: {
+//                        VStack(){
+//                            Spacer()
+//                                .padding(.top, 70)
+//                            Image(systemName: "bell.fill")
+//                                .resizable()
+//                                .frame(width: 27, height: 30)
+//                                //.padding(.top, 89)
+//                        }
+//
+//                    }
+//                }
+
+                
+
             } // ZStack
         } // NavigationStack
     }// body
