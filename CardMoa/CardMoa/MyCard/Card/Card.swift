@@ -39,3 +39,20 @@ extension CompanyName {
         CompanyName(name: "하나")
     ]
 }
+
+struct BenefitCategory: Identifiable {
+    var id = UUID()
+    var category: String
+    var usePrice: String // 사용금액
+    var balance: String // 잔액
+    var width: CGFloat
+}
+
+extension BenefitCategory {
+    static var categoryList: [BenefitCategory] = [
+        BenefitCategory(category: "커피전문점 50% 청구할인", usePrice: "0 원", balance: "잔여 : 13,000 원", width: 280),
+        BenefitCategory(category: "편의점 10% 청구할인", usePrice: "2,195 원", balance: "잔여 : 5,805 원", width: 200),
+        BenefitCategory(category: "대중교통 10% 청구할인", usePrice: "3,850 원", balance: "잔여 : 4,150 원", width: 150),
+        BenefitCategory(category: "온라인 간편결제 10% 청구할인", usePrice: "1,336 원", balance: "잔여 : 6,664 원", width: 220)
+    ]
+}

@@ -21,17 +21,19 @@ struct CardBackView: View {
                 .frame(width: width, height: height)
             VStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("삼성카드 id ON")
+                    Text("삼성카드 iD ON")
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.mainColor)
+                        .padding(.bottom, 10)
                     HStack {
                         Text("카드 이용 실적")
-                            .fontWeight(.medium)
-                        Text("2022. 11.01 ~ 2022.11.30")
-                            .foregroundColor(.gray)
-                            .font(.system(size: 10))
+                            .fontWeight(.bold)
                     }
+                    Text("이용 실적 반영기간: 2022. 11.01 ~ 2022.11.30")
+                        .foregroundColor(.gray)
+                        .font(.system(size: 11))
+                        .padding(.bottom, 10)
                     HStack {
                         Text("총 사용금액")
                         Spacer()
@@ -39,20 +41,24 @@ struct CardBackView: View {
                             .fontWeight(.bold)
                             .font(.title3)
                     }
+                    
                 }
                 Divider()
+                    .padding(.vertical, 15)
                 HStack {
                     Text("2022년 12월 예정 혜택")
                         .fontWeight(.bold)
                     Spacer()
                 }
-                //                HStack {
-                //                    Spacer()
-                //                    Text("현재 1구간 혜택 예정")
-                //                        .font(.system(size: 13))
-                //                        .foregroundColor(.darkGray)
-                //                        .padding(.trailing, 10)
-                //                }
+                .padding(.bottom, 10)
+                
+                HStack {
+                    Spacer()
+                    Text("현재 1구간 혜택 예정")
+                        .font(.system(size: 10))
+                        .foregroundColor(.darkGray)
+                        
+                }
                 
                 ZStack(alignment: .leading) {
                     Capsule().frame(width: 230, height: 10)
@@ -88,60 +94,9 @@ struct CardBackView: View {
                     }
                 }
                 
-                HStack {
-                    Text("1구간 혜택")
-                        .foregroundColor(.mainColor)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(.bottom, 5)
-                
-                VStack(spacing: 10) {
-                    HStack {
-                        Text("커피&베이커리")
-                            .fontWeight(.medium)
-                        Spacer()
-                        Text("50% 청구할인")
-                            .foregroundColor(.darkGray)
-                    }
-                    HStack {
-                        Text("편의점")
-                            .fontWeight(.medium)
-                        Spacer()
-                        Text("10% 청구할인")
-                            .foregroundColor(.darkGray)
-                    }
-                    HStack {
-                        Text("대중교통")
-                            .fontWeight(.medium)
-                        Spacer()
-                        Text("10% 청구할인")
-                            .foregroundColor(.darkGray)
-                    }
-                    HStack {
-                        Text("통신&공과금")
-                            .fontWeight(.medium)
-                        Spacer()
-                        Text("7% 청구할인")
-                            .foregroundColor(.darkGray)
-                    }
-                }
-//                NavigationLink(destination: CardDetailView(), tag: 1, selection: self.$tag) {
-//                    Button(action: {
-//                        self.tag = 1
-//                    }) {
-//                        Text("카드 상세 혜택 보러가기")
-//                            .foregroundColor(.white)
-//                            .fontWeight(.bold)
-//                            .frame(width: 235, height: 30)
-//                            .background(Color.mainColor)
-//                            .cornerRadius(5)
-//                    }
-//
-//                }
                 Spacer()
             }
-            .padding(15)
+            .padding(20)
             .frame(width: 260, height: 410)
             
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
