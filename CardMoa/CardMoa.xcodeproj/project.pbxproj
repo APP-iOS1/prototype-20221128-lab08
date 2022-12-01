@@ -20,6 +20,7 @@
 		1E271B8729359301004B677B /* BenefitSearchInitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E271B8629359301004B677B /* BenefitSearchInitialView.swift */; };
 		1E271B892935931C004B677B /* NoCardResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E271B882935931C004B677B /* NoCardResultView.swift */; };
 		1E271B8B29359335004B677B /* CardResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E271B8A29359335004B677B /* CardResultView.swift */; };
+		1E271BA72938A41A004B677B /* AutoAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E271BA62938A41A004B677B /* AutoAlarmView.swift */; };
 		2371DDB529372900004173DC /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371DDB429372900004173DC /* CardDetailView.swift */; };
 		2380ABA829372CE500B44324 /* CardDetailButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380ABA729372CE500B44324 /* CardDetailButtonView.swift */; };
 		EA93557329358BD1008B12EC /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93557229358BD1008B12EC /* CardBackView.swift */; };
@@ -47,6 +48,7 @@
 		1E271B8629359301004B677B /* BenefitSearchInitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitSearchInitialView.swift; sourceTree = "<group>"; };
 		1E271B882935931C004B677B /* NoCardResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCardResultView.swift; sourceTree = "<group>"; };
 		1E271B8A29359335004B677B /* CardResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResultView.swift; sourceTree = "<group>"; };
+		1E271BA62938A41A004B677B /* AutoAlarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoAlarmView.swift; path = CardMoa/MyCard/AutoAlarmView.swift; sourceTree = SOURCE_ROOT; };
 		2371DDB429372900004173DC /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		2380ABA729372CE500B44324 /* CardDetailButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailButtonView.swift; sourceTree = "<group>"; };
 		EA93557229358BD1008B12EC /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		1E271B742934B206004B677B /* MyCard */ = {
 			isa = PBXGroup;
 			children = (
+				1E271BA62938A41A004B677B /* AutoAlarmView.swift */,
 				1E271B822934B2AB004B677B /* MyCardView.swift */,
 				EA9355832935D9A1008B12EC /* AddMyCardView.swift */,
 				EA93557C2935C548008B12EC /* Card */,
@@ -259,6 +262,7 @@
 				1E271B7B2934B273004B677B /* CardRecommendView.swift in Sources */,
 				1E271B8B29359335004B677B /* CardResultView.swift in Sources */,
 				1E271B812934B29D004B677B /* ProfileView.swift in Sources */,
+				1E271BA72938A41A004B677B /* AutoAlarmView.swift in Sources */,
 				EA93557929359A4B008B12EC /* CardFlipView.swift in Sources */,
 				EA935577293596F7008B12EC /* Card.swift in Sources */,
 				EA9355802935D500008B12EC /* ViewExtension.swift in Sources */,
