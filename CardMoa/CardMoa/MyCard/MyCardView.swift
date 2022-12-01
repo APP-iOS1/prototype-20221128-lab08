@@ -53,13 +53,7 @@ struct MyCardView: View {
                     
                     Spacer()
                     
-                    NavigationLink {
-                        
-                    } label: {
-                        Image("bell")
-                            .resizable()
-                            .frame(width: 30, height: 35)
-                    }
+                    
                     
                 }
                 .font(.title2)
@@ -96,6 +90,21 @@ struct MyCardView: View {
                     for: .tabBar
                 )
                 .toolbarBackground(.visible, for: .navigationBar, .tabBar)
+                
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            
+                        } label: {
+                            Image(systemName: "bell.fill")
+                                .resizable()
+                                .frame(width: 27, height: 30)
+                                .offset(y: 47)
+                        }
+                        
+                        
+                    }
+                }
                 
             } // ZStack
         } // NavigationStack
