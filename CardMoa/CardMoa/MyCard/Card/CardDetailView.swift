@@ -10,70 +10,142 @@ import SwiftUI
 struct CardDetailView: View {
     @State private var tag: Int? = nil
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        
+        VStack {
             VStack(alignment: .leading, spacing: 10) {
+                Text("삼성카드 iD ON")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.mainColor)
+                    .padding(.bottom, 10)
                 HStack {
-                    Image(systemName: "ticket")
-                    Text("연회비 지원")
+                    Text("카드 이용 실적")
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
                 }
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
+                Text("이용 실적 반영기간: 2022. 11.01 ~ 2022.11.30")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 15))
+                    .padding(.bottom, 10)
+                HStack {
+                    Text("총 사용금액")
+                    Spacer()
+                    Text("420,557원")
+                        .fontWeight(.bold)
+                        .font(.title3)
+                }
                 
-                Text("온라인신규회원 연회비 100% 캐시백 \n(삼성개인신용카드 신규발급 시 제공)")
             }
-            .padding(.bottom, 20)
+            Divider()
+                .padding(.vertical, 15)
+            HStack {
+                Text("2022년 12월 예정 혜택")
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            .padding(.bottom, 10)
             
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Image(systemName: "fork.knife")
-                    Text("외식 & 베이커리")
-                }
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
-                
-                Text("커피전문점·배달앱·델리 중 많이 쓰는 영역 30% 자동맞춤 할인")
-            }
-            .padding(.bottom, 20)
             
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Image(systemName: "bus")
-                    Text("교통")
-                }
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .foregroundColor(Color(red: 237 / 255, green: 237 / 255, blue: 237 / 255))
+                Capsule()
+                    .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 10)
+                    .foregroundColor(.mainColor)
                 
-                Text("이동통신 10% 결제일할인")
             }
-            .padding(.bottom, 20)
+            .frame(width: UIScreen.main.bounds.width - 50, height: 10)
             
-            VStack(alignment: .leading, spacing: 10) {
-                HStack {
-                    Image(systemName: "cart.fill")
-                    Text("쇼핑")
+            HStack {
+                Spacer()
+                VStack {
+                    Circle().frame(width: 15, height: 15)
+                        .foregroundColor(.mainColor)
+                        .overlay(
+                            Text("1")
+                                .foregroundColor(.white)
+                                .fontWeight(.bold))
+                        .font(.system(size: 12))
+                    Text("40만원")
+                        .font(.system(size: 10))
                 }
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.darkGray)
                 
-                Text("온라인 간편결제 3% · 1% 결제일 할인")
+                Spacer()
+                VStack {
+                    Circle().frame(width: 15, height: 15)
+                        .foregroundColor(.mainColor)
+                        .overlay(
+                            Text("2")
+                                .foregroundColor(.white)
+                                .fontWeight(.bold))
+                        .font(.system(size: 12))
+                    Text("80만원")
+                        .font(.system(size: 10))
+                }
             }
-            .padding(.bottom, 20)
+            .frame(width: UIScreen.main.bounds.width - 30)
+            
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("다음달 예정 혜택은?")
+                        .bold()
+                    Spacer()
+                    Text("현재 1구간 혜택 예정")
+                        .font(.system(size: 13))
+                        .foregroundColor(.darkGray)
+                    
+                }
+                .padding(.bottom, 5)
+                
+                HStack {
+                    VStack {
+                        HStack {
+                            Text("필요 실적을 모두 달성하여,")
+                            Spacer()
+                        }
+                        HStack {
+                            Text("다음달 ")
+                            Text("1구간 혜택")
+                                .padding(.leading, -8)
+                                .bold()
+                            Text("으로 적용됩니다!")
+                                .padding(.leading, -8)
+                            Spacer()
+                        }
+                    }
+                        .font(.system(size: 20))
+                    Spacer()
+                }
+            }
+            .padding(.vertical, 15)
+            
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("31일간 400,000원")
+                                .foregroundColor(.mainColor)
+                                .bold()
+                            Text("을 더 사용하면,")
+                                .padding(.leading, -8)
+                        }
+                        HStack {
+                            Text("다음달")
+                            Text("2구간 혜택")
+                                .bold()
+                            Text("으로 적용됩니다!")
+                        }
+                    }
+                    Spacer()
+                }
+                .font(.system(size: 20))
+
+            }
+            
         }
-        .font(.title3)
-        .foregroundColor(.gray)
-        .fontWeight(.medium)
-        .padding(15)
-        .navigationTitle("카드 상세 혜택")
-        .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
-        .toolbarBackground(
-            Color.mainColor,
-            for: .navigationBar, .tabBar
-        )
-        .toolbarBackground(.visible, for: .navigationBar, .tabBar)
+        .padding(20)
+        
+        
     }
 }
 

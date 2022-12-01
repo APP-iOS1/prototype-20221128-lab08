@@ -27,7 +27,7 @@ struct CardDetailButtonView: View {
 //        }
         
         NavigationLink {
-            CardDetailView()
+            DetailMainView()
         } label: {
             Text("카드 상세 혜택 보러가기")
                 .foregroundColor(.white)
