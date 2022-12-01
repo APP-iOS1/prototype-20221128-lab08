@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color.mainColor)
+        UITabBar.appearance().backgroundColor = UIColor(Color.white)
     }
     
     var body: some View {
@@ -39,7 +39,7 @@ struct MainTabView: View {
                 Text("나의 소비")
             }.tag(5)
         }.onAppear() {
-            UITabBar.appearance().barTintColor = UIColor(Color.mainColor)
+            UITabBar.appearance().barTintColor = UIColor(Color.white)
         }
         
         //            .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)

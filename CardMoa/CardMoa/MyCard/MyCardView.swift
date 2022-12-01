@@ -54,6 +54,7 @@ struct MyCardView: View {
                     
                     Spacer()
                     
+
                     NavigationLink {
 
                         
@@ -110,24 +111,6 @@ struct MyCardView: View {
                     for: .tabBar
                 )
                 .toolbarBackground(.visible, for: .navigationBar, .tabBar)
-                
-
-//                .toolbar {
-//                    NavigationLink {
-//
-//                    } label: {
-//                        VStack(){
-//                            Spacer()
-//                                .padding(.top, 70)
-//                            Image(systemName: "bell.fill")
-//                                .resizable()
-//                                .frame(width: 27, height: 30)
-//                                //.padding(.top, 89)
-//                        }
-//
-//                    }
-//                }
-
                 
 
             } // ZStack

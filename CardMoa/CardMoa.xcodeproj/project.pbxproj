@@ -161,11 +161,11 @@
 		EA93557C2935C548008B12EC /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				2380ABA729372CE500B44324 /* CardDetailButtonView.swift */,
 				EA935576293596F7008B12EC /* Card.swift */,
 				EA93557829359A4B008B12EC /* CardFlipView.swift */,
 				EA9355742935934B008B12EC /* CardFrontView.swift */,
 				EA93557229358BD1008B12EC /* CardBackView.swift */,
+				2380ABA729372CE500B44324 /* CardDetailButtonView.swift */,
 				EA9355852935EEB4008B12EC /* AddCardListView.swift */,
 				2371DDB429372900004173DC /* CardDetailView.swift */,
 			);

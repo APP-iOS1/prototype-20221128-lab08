@@ -86,6 +86,7 @@ struct AddMyCardView: View {
                         AddCardListView(card: card)
                             
                     }
+                    .padding(.bottom, 30)
                     
                     
                     

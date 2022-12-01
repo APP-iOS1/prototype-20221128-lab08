@@ -20,10 +20,9 @@ struct CardFlipView: View {
         ZStack {
             CardBackView(degree: $backDegree)
             CardFrontView(cardName: card.imgName, degree: $frontDegree)
-            if backDegree == 0 {
-                CardDetailButtonView(degree: $backDegree)
-                    .offset(y: 180)
-            }
+            //if backDegree == 0 { //값이 0 됐을 떄 뿅! 나와서 어색해 보였던 듯?
+            CardDetailButtonView(degree: $backDegree)
+            //}
         }
         .onTapGesture {
             flipCard ()

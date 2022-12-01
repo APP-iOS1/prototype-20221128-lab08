@@ -13,26 +13,14 @@ struct CardFrontView: View {
     
     var body: some View {
         ZStack {
-           
-                Image("\(cardName)_L")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 260)
-                    .padding(.horizontal, 5)
-                HStack {
-                    Spacer()
-                    Image(systemName: "magnifyingglass.circle.fill")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .offset(x: -10, y:170)
-                        .shadow(radius: 2)
-                    
-                        
-                }
-            
+            RoundedRectangle(cornerRadius: 15)
+                .stroke()
+                .foregroundColor(.gray)
+
+
 
             .frame(width: 240, height: 400)
+
 
             Image("\(cardName)_L")
                 .resizable()
@@ -56,13 +44,14 @@ struct CardFrontView: View {
                     .bold()
                     .shadow(radius: 3)
                 Spacer()
-                
+
                 Image(systemName: "hand.tap")
                     .foregroundColor(.gray)
                     .fontWeight(.bold)
                     .font(.title)
                     .shadow(radius: 2)
                 
+
             }
             .padding(10)
             .frame(width: 260, height: 400, alignment: .bottom)
