@@ -44,10 +44,10 @@ struct CardFrontView: View {
                 Spacer()
 
                 Image(systemName: "hand.tap")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .fontWeight(.bold)
                     .font(.title)
-                    .shadow(radius: 3)
+                    .shadow(color:.black, radius: 3)
                 
 
             }

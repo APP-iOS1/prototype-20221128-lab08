@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CardDetailHistoryView: View {
     var body: some View {
-        Text("카드사용내역")
+        ScrollView {
+            Image("CardUse")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
     }
 }
 
