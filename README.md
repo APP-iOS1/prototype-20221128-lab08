@@ -103,16 +103,24 @@
 
 ## 최종 프로토타입
 ### 나의 카드 리스트
-<img width="200" src="https://user-images.githubusercontent.com/55937627/205227635-18cd146d-b183-4181-8e1e-75274c8a8278.gif">  <img width="200" src="https://user-images.githubusercontent.com/55937627/205227902-07af678b-5468-46e5-a515-95b55e512c4a.gif"><img width="200" src="https://user-images.githubusercontent.com/55937627/205231252-df497733-a78e-4948-a125-65f46ed3e195.gif">
+| <img width="200" src="https://user-images.githubusercontent.com/55937627/205227635-18cd146d-b183-4181-8e1e-75274c8a8278.gif"> | <img width="200" src="https://user-images.githubusercontent.com/55937627/205227902-07af678b-5468-46e5-a515-95b55e512c4a.gif">  <img width="200" src="https://user-images.githubusercontent.com/55937627/205231252-df497733-a78e-4948-a125-65f46ed3e195.gif"> |
+|:-:|:-:|
+| Before | After |
 
 ### 카드 추가
-<img width="200" src="https://user-images.githubusercontent.com/55937627/205229262-fbcdc054-cd9a-45ce-84d8-502fd9a51659.gif">  <img width="200" src="https://user-images.githubusercontent.com/55937627/205229225-09864b67-832a-4f6d-8511-f8f15d14eecd.gif">
+| <img width="200" src="https://user-images.githubusercontent.com/55937627/205229262-fbcdc054-cd9a-45ce-84d8-502fd9a51659.gif"> |  <img width="200" src="https://user-images.githubusercontent.com/55937627/205229225-09864b67-832a-4f6d-8511-f8f15d14eecd.gif"> |
+|:-:|:-:|
+| Before | After |
 
 ### 카드 정보 상세 내역
-<img width="200" src="https://user-images.githubusercontent.com/55937627/205229419-dc672221-6536-4d89-9f5a-19c92440c7f2.png">  <img width="200" src="https://user-images.githubusercontent.com/55937627/205229465-0844c707-742f-4e24-b3af-3e50332ad57b.png"><img width="200" src="https://user-images.githubusercontent.com/55937627/205229480-27872025-d212-4ee6-8296-7eb6537a4b18.png"><img width="200" src="https://user-images.githubusercontent.com/55937627/205229505-d58d477e-a29a-4f2f-b44e-341920d1508d.png">
+| <img width="200" src="https://user-images.githubusercontent.com/55937627/205229419-dc672221-6536-4d89-9f5a-19c92440c7f2.png"> |  <img width="200" src="https://user-images.githubusercontent.com/55937627/205229465-0844c707-742f-4e24-b3af-3e50332ad57b.png"><img width="200" src="https://user-images.githubusercontent.com/55937627/205229480-27872025-d212-4ee6-8296-7eb6537a4b18.png"><img width="200" src="https://user-images.githubusercontent.com/55937627/205229505-d58d477e-a29a-4f2f-b44e-341920d1508d.png"> |
+|:-:|:-:|
+| Before | After |
 
 ### 카드 추천
-<img width="200" src="https://user-images.githubusercontent.com/55937627/205229828-16bec7ed-2234-4b11-a597-c141a1bf8d3f.png">  <img width="200" src="https://user-images.githubusercontent.com/55937627/205229841-7bbaf751-0863-46f7-9c8d-b6214a0ce63a.gif">
+| <img width="200" src="https://user-images.githubusercontent.com/55937627/205229828-16bec7ed-2234-4b11-a597-c141a1bf8d3f.png"> | <img width="200" src="https://user-images.githubusercontent.com/55937627/205229841-7bbaf751-0863-46f7-9c8d-b6214a0ce63a.gif"> |
+|:-:|:-:|
+| Before | After |
 
 
 ## 참여자
