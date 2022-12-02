@@ -15,11 +15,8 @@ struct CardFrontView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .stroke()
-                .foregroundColor(.gray)
-
-
-
-            .frame(width: 240, height: 400)
+                .foregroundColor(Color(red: 220/255, green: 220/255, blue: 220/255))
+                .frame(width: 260, height: 400)
 
 
             Image("\(cardName)_L")
@@ -31,10 +28,11 @@ struct CardFrontView: View {
                 .padding(.horizontal, 5)
             
             VStack {
-                LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white.opacity(0.5), Color.white.opacity(0.7), Color.white]),
+                LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]),
                                startPoint: .top, endPoint: .bottom)
-                .frame(height: 250)
+                .frame(height: 200)
                 .cornerRadius(15)
+                //.border(.black)
             }
             .frame(width: 260, height: 400, alignment: .bottom)
             
@@ -42,14 +40,14 @@ struct CardFrontView: View {
                 Text("\(cardName)")
                     .font(.title3)
                     .bold()
-                    .shadow(radius: 3)
+                    .shadow(radius: 5)
                 Spacer()
 
                 Image(systemName: "hand.tap")
                     .foregroundColor(.gray)
                     .fontWeight(.bold)
                     .font(.title)
-                    .shadow(radius: 2)
+                    .shadow(radius: 3)
                 
 
             }

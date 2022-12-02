@@ -17,8 +17,13 @@ struct CardBackView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 18)
+                .fill(.white)
+                .frame(width: width, height: height)
+            
+            RoundedRectangle(cornerRadius: 18)
                 .stroke(.gray.opacity(0.7), lineWidth: 0.5)
                 .frame(width: width, height: height)
+            
             VStack {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("삼성카드 iD ON")

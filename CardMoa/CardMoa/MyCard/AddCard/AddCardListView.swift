@@ -28,7 +28,7 @@ struct AddCardListView: View {
                                 .bold()
                                 .multilineTextAlignment(.center)
                         }
-                        .padding(.trailing, 30)
+                        .padding(.trailing, 20)
                         
                         Text(arrow)
                             .padding(3)
@@ -70,7 +70,9 @@ struct AddCardListView: View {
                             }
                             HStack {
                                 Image(systemName: "fork.knife")
+                                    .padding(.leading, 2)
                                 Text("외식 & 베이커리")
+                                    .padding(.leading, 4)
                             }
                             HStack {
                                 Image(systemName: "bus")
@@ -98,9 +100,9 @@ struct AddCardListView: View {
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        if listX <= 0 && listX >= -100 { //-100보다 크고 0보다 작을 때
+                        if listX <= 0 && listX >= -90 { //-90보다 크고 0보다 작을 때
                             listX += value.translation.width / 30
-                            if listX <= -100 { // -100보다 작거나 같을 때
+                            if listX <= -90 { // -90보다 작거나 같을 때
                                 showingAlert = true
                                
                             }

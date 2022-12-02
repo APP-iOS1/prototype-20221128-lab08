@@ -12,20 +12,7 @@ struct CardDetailButtonView: View {
     @State private var tag: Int? = nil
     
     var body: some View {
-//        NavigationLink(destination: CardDetailView()) {
-//            Button(action: {
-//                self.tag = 1
-//            }) {
-//                Text("카드 상세 혜택 보러가기")
-//                    .foregroundColor(.white)
-//                    .fontWeight(.bold)
-//                    .frame(width: 235, height: 30)
-//                    .background(Color.mainColor)
-//                    .cornerRadius(5)
-//            }
-//            .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
-//        }
-        
+
         NavigationLink {
             DetailMainView()
         } label: {
@@ -40,7 +27,6 @@ struct CardDetailButtonView: View {
         .padding(.bottom, 20)
         .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
         
-
     }
 
 }

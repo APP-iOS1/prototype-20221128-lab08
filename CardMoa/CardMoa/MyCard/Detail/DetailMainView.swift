@@ -23,14 +23,15 @@ struct DetailMainView: View {
                 selectionAlignment: .bottom,
                 content: { item, isSelected in
                     Text(item)
-                        .foregroundColor(isSelected ? Color.black : Color.gray )
+                        .foregroundColor(isSelected ? Color.mainColor : Color.gray )
+                        .bold()
                         .padding(.horizontal, 50)
-                        .padding(.vertical, 15)
+                        .padding(.vertical, 13)
                 },
                 selection: {
                     VStack(spacing: 0) {
                         Spacer()
-                        Color.black.frame(width: 90, height: 1)
+                        Color.mainColor.frame(width: 90, height: 1)
                     }
                 })
             .onAppear {

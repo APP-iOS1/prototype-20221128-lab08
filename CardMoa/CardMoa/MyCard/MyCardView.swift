@@ -6,32 +6,24 @@
 //
 
 import SwiftUI
+import CollectionViewPagingLayout
 
 struct MyCardView: View {
     @State private var selectedCardList: Bool = false
     @State private var creditColor: Color = .mainColor
     @State private var checkColor: Color = .gray
     
+    var options: ScaleTransformViewOptions {
+        .layout(.linear)
+    }
+    
     var body: some View {
         NavigationStack{
         
             ZStack {
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    
-                    HStack {
-                        ForEach(Card.cardList) { card in
-                            VStack {
-                                CardFlipView(card: card)
-                            }
-                        }
-                        .frame(width: 300, height: 600)
-                    }
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 20)
-                    
-                } // ScrollView
-            
+                CardPagingView()
+                
                 
                 HStack {
                     Button {
@@ -54,25 +46,14 @@ struct MyCardView: View {
                     
                     Spacer()
                     
-
                     NavigationLink {
-
-                        
-
-                    AutoAlarmView()
-
+                        AutoAlarmView()
                     } label: {
                         Image("bell")
                             .resizable()
                             .frame(width: 30, height: 35)
-
                     }
-
-                            .padding(.top)
-                    
-                    
-                    
-
+                    .padding(.top)
                     
                 }
                 .font(.title2)
